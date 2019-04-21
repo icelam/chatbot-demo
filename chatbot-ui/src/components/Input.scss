@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.input-field {
+  display: block;
+  color: $color-input-text;
+  background-color: $color-white;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+
+  outline: none;
+  border: 0;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  -webkit-appearance:none;
+  appearance: none;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}

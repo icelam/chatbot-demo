@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.error {
+  background-color: $color-red;
+  color: $color-white;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 20px;
+  line-height: 1em;
+  display: none;
+
+  .svg-inline--fa {
+    margin-right: 5px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+

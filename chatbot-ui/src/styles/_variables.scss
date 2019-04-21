@@ -1,0 +1,44 @@
+@import 'styles/colors';
+
+// Font size
+$base-font-size: 14px;
+
+// Paddings
+$padding-sm: 5px;
+$padding-md: 10px;
+$padding-lg: 20px;
+
+// Box shadow
+$base-box-shadow: 0px 0px 5px 0px rgba($color-black,0.2);
+
+// Loading animation duration
+$animation-duration: 1.2s;
+
+// Chatbot
+$color-body-background: $color-extra-light-yellow;
+$color-chatbot-theme-color: $color-orange;
+$color-chatbot-theme-color-hover: $color-light-orange;
+$color-chatbot-background-color: $color-grey-92;
+$color-chatbot-light-color: $color-white;
+$color-chatbot-light-color-hover: rgba($color-chatbot-light-color, 0.9);
+$color-chatbot-text-color: $color-grey-13;
+$chatbot-icon-size: 80px;
+$chatbot-icon-padding: 4px;
+$chatbot-icon-position-top: 15px;
+$chatbot-bubble-line-height: 20px;
+$chatbot-type-indicator-size: 6px;
+$chatbot-type-indicator-margin: 2px;
+
+//Modal overlay
+$color-modal-overlay: rgba($color-grey-13, 0.5);
+
+// Input
+$color-input-text: $color-grey-13;
+
+// Not Found
+$color-not-found-background: $color-grey-97;
+$color-not-found-h1: $color-grey-53;
+$color-not-found-h2: $color-grey-66;
+$color-not-found-text: $color-grey-53;
+$color-not-found-link: $color-dark-blue;
+$color-not-found-link-hover: $color-blue;

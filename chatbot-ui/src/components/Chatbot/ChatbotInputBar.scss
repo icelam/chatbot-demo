@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.chatbot__input {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+
+  .input-field {
+    flex: 1 1 auto;
+    padding-right: 0;
+  }
+
+  .icon-button {
+    background-color: $color-chatbot-light-color;
+    flex: 0 0 0;
+    vertical-align: middle;
+    float: right;
+    padding: 0 20px;
+  }
+}

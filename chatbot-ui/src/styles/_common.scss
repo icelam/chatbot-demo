@@ -1,0 +1,24 @@
+/* Common CSS */
+@import 'styles/variables';
+
+* {
+  /*-webkit-user-select: none;*/
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: $base-font-size;
+  font-family: 'Open Sans',微軟正黑體,"PingFang TC","Lantinghei TC","Heiti TC","Apple LiGothic","Microsoft JhengHei","Microsoft JhengHei UI","Microsoft YaHei","Microsoft YaHei UI","PMingLiU",Arial,sans-serif;
+}
+
+// Fill page height
+body, #root, #app, .page {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}

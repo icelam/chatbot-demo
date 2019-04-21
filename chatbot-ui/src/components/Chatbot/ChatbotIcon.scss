@@ -1,0 +1,16 @@
+@import 'styles/variables';
+
+.chatbot__icon {
+  padding: $chatbot-icon-padding;
+  width: $chatbot-icon-size;
+  height: $chatbot-icon-size;
+  background-color: $color-chatbot-light-color;
+  box-shadow: $base-box-shadow;
+  border-radius: 2px;
+
+  &__image {
+    width: $chatbot-icon-size;
+    height: $chatbot-icon-size;
+    display: block;
+  }
+}

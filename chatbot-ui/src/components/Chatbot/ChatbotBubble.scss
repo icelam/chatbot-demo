@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.chatbot__bubble {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: $chatbot-bubble-line-height;
+  border-radius: $chatbot-bubble-line-height / 2;
+  box-shadow: 0px 0px 2px 0px rgba($color-black, 0.1);
+
+  &--bot {
+    color: $color-chatbot-light-color;
+    background-color: $color-chatbot-theme-color;
+    border-top-left-radius: 2px;
+    box-sizing: border-box;
+    max-width: 90%;
+
+    a {
+      color: $color-chatbot-light-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-chatbot-light-color-hover;
+      }
+    }
+  }
+
+  &--user {
+    color: $color-chatbot-text-color;
+    background-color: $color-chatbot-light-color;
+    border-top-right-radius: 2px;
+    text-align: left;
+
+    a {
+      color: $color-chatbot-theme-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-chatbot-theme-color-hover;
+      }
+    }
+  }
+}

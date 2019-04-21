@@ -1,0 +1,17 @@
+@import 'styles/variables';
+
+.chatbot__history {
+  overflow: scroll;
+  position: relative;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+
+  .error {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+    box-sizing: border-box;
+  }
+}

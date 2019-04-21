@@ -1,0 +1,21 @@
+@import 'styles/variables';
+@import 'styles/breakpoints';
+
+.chatbot-page {
+  max-height: calc(100%);
+  background-color: $color-body-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  box-sizing: border-box;
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    padding: 0;
+  }
+
+  .chatbot {
+    flex: 1 1 auto;
+  }
+}

@@ -1,0 +1,9 @@
+@import 'styles/variables';
+
+.chatbot__message {
+  margin: 0 0 15px 0;
+
+  &--user {
+    text-align: right;
+  }
+}

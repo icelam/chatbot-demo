@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.chatbot__header {
+  position: relative;
+
+  &__bar {
+    background-color: $color-chatbot-theme-color;
+    width: 100%;
+    height: $chatbot-icon-size / 2 + $chatbot-icon-position-top + $chatbot-icon-padding;
+    margin-bottom: $chatbot-icon-size / 2 + $chatbot-icon-position-top + $chatbot-icon-padding;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: right;
+    color: $color-chatbot-light-color;
+    line-height: $chatbot-icon-size / 2;
+
+    .svg-inline--fa {
+      vertical-align: middle;
+    }
+  }
+
+  .chatbot__icon {
+    position: absolute;
+    top: $chatbot-icon-position-top;
+    left: 50%;
+    margin-left: ($chatbot-icon-size + $chatbot-icon-padding) / 2 * -1;
+  }
+}
