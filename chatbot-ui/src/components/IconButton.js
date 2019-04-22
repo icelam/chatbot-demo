@@ -8,6 +8,7 @@ import './IconButton.scss';
 
 const IconButton = ({ icon, clickFunction, theme, disabled }) => (
   <button
+    type="button"
     className={`icon-button${theme === 'light' ? ' icon-button--light' : ''}`}
     onClick={clickFunction}
     disabled={disabled}

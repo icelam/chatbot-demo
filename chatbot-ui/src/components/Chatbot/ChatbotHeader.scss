@@ -14,7 +14,7 @@
     color: $color-chatbot-light-color;
     line-height: $chatbot-icon-size / 2;
 
-    .svg-inline--fa {
+    .svg-inline--fa, .fa, .fas, .far, .fal, .fab {
       vertical-align: middle;
     }
   }

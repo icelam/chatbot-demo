@@ -7,6 +7,8 @@
   height: 100%;
   background-color: $color-modal-overlay;
   display: none;
+  top: 0;
+  left: 0;
   /* opacity: 0;
   transition: all 2s ease-out; */
 
@@ -46,7 +48,7 @@
       background-color: $color-chatbot-light-color;
 
       &__icon {
-        flex: 0 0 0;
+        flex: 0 0 auto;
 
         img {
           width: 80px;

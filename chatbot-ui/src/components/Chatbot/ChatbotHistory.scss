@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .chatbot__history {
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
   padding: 10px 20px;
   scroll-behavior: smooth;

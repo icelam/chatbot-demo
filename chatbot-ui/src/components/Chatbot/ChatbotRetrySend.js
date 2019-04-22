@@ -8,7 +8,9 @@ import './ChatbotRetrySend.scss';
 
 const ChatbotRetrySend = ({ actions }) => (
   <div className="chatbot__retry">
-    <button className="chatbot__retry__button" onClick={actions.retrySubmitQuestion}>Failed to send message. Click here to retry.</button>
+    <button type="button" className="chatbot__retry__button" onClick={actions.retrySubmitQuestion}>
+      Failed to send message. Click here to retry.
+    </button>
   </div>
 );
 
