@@ -2,6 +2,7 @@
 
 .chatbot__history {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: relative;
   padding: 10px 20px;
   scroll-behavior: smooth;

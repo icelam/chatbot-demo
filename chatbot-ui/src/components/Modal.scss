@@ -60,6 +60,7 @@
         padding: 0 0 0 25px;
         font-size: 12px;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
         max-height: 60vh;
         flex: 1 1 auto;
 
