@@ -6,16 +6,15 @@ const boxen = require('boxen');
 const os = require('os');
 
 // NLP
-const { NlpManager } = require('node-nlp');
-const trainNlp = require('./utils/train-nlp');
+const nlpService = require('./services/nlpService');
+
+// Logger
+const { logger } = require('./utils/logger');
 
 // Route
 const router = require('./router');
 
 const app = express();
-
-const manager = new NlpManager({ languages: ['en'] });
-global.manager = manager;
 
 dotenv.config();
 
@@ -40,7 +39,7 @@ const server = () => {
   portfinder.getPortPromise().then((port) => {
     // defined port is in use
     if (portfinder.basePort !== port) {
-      console.log(`\x1b[31m\x1b[1m✘  Port ${portfinder.basePort} is already in use. Server started with port ${port} instead.\x1b[0m\x1b[30m`);
+      logger.warn(`Port ${portfinder.basePort} is already in use. Server started with port ${port} instead.`);
     }
 
     // Get json encoded post data
@@ -49,12 +48,12 @@ const server = () => {
 
     welcomeMessage(port);
   }).catch((err) => {
-    console.log(`\x1b[31m\x1b[1m✘  Failed to find available port to start server:\x1b[0m\x1b[30m\n${err}`);
+    logger.error(`Failed to find available port to start server:\n${err}`);
   });
 };
 
 (async () => {
   // Train NLP before server start
-  await trainNlp(manager);
+  await nlpService.trainNlp();
   server();
 })();

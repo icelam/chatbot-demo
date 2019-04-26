@@ -1,19 +1,18 @@
 const router = require('express').Router();
-const { generateAnswer, notFound, welcomeMessage } = require('../utils/response');
+const cors = require('cors');
 
-// Allow CORS
-router.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
+const chatbotController = require('../controllers/chatbotController');
+const baseController = require('../controllers/baseController');
+
+// Allow CORS for all routes
+router.use(cors());
 
 // Chatbot Answer
-router.get('/api/v1/welcome', welcomeMessage());
-router.post('/api/v1/answer', generateAnswer());
+router.get('/api/v1/welcome', chatbotController.welcomeMessage);
+router.post('/api/v1/answer', chatbotController.generateAnswer);
 
 // Not Found
-router.get('*', notFound());
-router.post('*', notFound());
+router.get('*', baseController.notFound);
+router.post('*', baseController.notFound);
 
 module.exports = router;

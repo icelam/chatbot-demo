@@ -10,9 +10,11 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "boxen": "^3.0.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "node-nlp": "^3.0.1",
-    "portfinder": "^1.0.20"
+    "portfinder": "^1.0.20",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "dotenv": "^7.0.0",
