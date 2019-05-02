@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 // Styles
 import './ChatbotBubble.scss';
 
+const createMarkup = (rawContent) => ({__html: rawContent});
+
 const ChatbotBubble = ({ text, user }) => (
-  <span className={`chatbot__bubble chatbot__bubble--${user}`}>
-    { text }
-  </span>
+  <span className={`chatbot__bubble chatbot__bubble--${user}`} dangerouslySetInnerHTML={createMarkup(text)}></span>
 );
 
 ChatbotBubble.propTypes = {

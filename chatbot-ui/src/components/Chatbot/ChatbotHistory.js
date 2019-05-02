@@ -17,7 +17,9 @@ const ChatbotHistory = ({ readyToChat, serverError, waitingForAnswer, sendError 
 
   useEffect(() => {
     if (chatHistory) {
-      chatHistory.scrollTop = chatHistory.scrollHeight;
+      const recordCount = chatHistory.childElementCount;
+      const scrollToPos = chatHistory.children[recordCount - 2].offsetTop;
+      chatHistory.scrollTop = scrollToPos;
     }
   },[chatRecord]);
 
