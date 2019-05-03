@@ -22,6 +22,13 @@ To start backend only, run `npm start` in `./chatbot-api`. The Express server de
 
 To start the frontend only, run `npm start` in `./chatbot-ui`.
 
+## To start the development environment ##
+To start the development encironment of frontend and backend concurrently,run `npm run dev` in project root folder.
+
+To start backend only, run `npm run dev` in `./chatbot-api`. The Express server default serves at port `3100`.
+
+To start the frontend only, run `npm start` in `./chatbot-ui`.
+
 ## Project Settings ##
 **To change the default port of Express server:**
 Change the variable `PORT` which can be found inside `./chatbot-api/.env`.
@@ -33,6 +40,9 @@ Change the variable `REACT_APP_API_DOMAIN` which can be found inside `./chatbot-
 The mapping of question and answers are put inside `./chatbot-api/data/questions` and `./chatbot-api/data/answers`. The data will then be used by [node-nlp](https://www.npmjs.com/package/node-nlp).
 
 For details node-nlp please read [example usage](https://www.npmjs.com/package/node-nlp#example-of-use) provided by [node-nlp](https://www.npmjs.com/package/node-nlp).
+
+## Node version ##
+* Node >= 9
 
 ***
 

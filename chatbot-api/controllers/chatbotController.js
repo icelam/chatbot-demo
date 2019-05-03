@@ -24,7 +24,7 @@ exports.generateAnswer = async (request, response) => {
       answer: result.score > THRESHOLD && result.answer ? result.answer : "Sorry, I don't understand"
     };
 
-    logger.info(`Response to ${request.method} ${request.url}`, { params: JSON.stringify(responseObj) });
+    logger.info(`Response to ${request.method} ${request.url}`, { params: JSON.stringify({ answers: result.intent }) });
 
     response.set('Content-Type', 'application/json');
     response.send(JSON.stringify(responseObj));

@@ -16,7 +16,7 @@ const Modal = ({ icon, title, content, show, closeFunction }) => (
         { icon ? (<div className="modal__box__content__icon"><img src={icon} alt="" /></div>) : '' }
         <div className="modal__box__content__text">
           <h3>{title}</h3>
-          <p>{ content.map((c, i) => <span key={i}>{c}<br /></span>) }</p>
+          { content }
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@ const Modal = ({ icon, title, content, show, closeFunction }) => (
 Modal.propTypes = {
   icon: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.array.isRequired,
+  content: PropTypes.node.isRequired,
   show: PropTypes.bool,
   closeFunction: PropTypes.func.isRequired
 };
