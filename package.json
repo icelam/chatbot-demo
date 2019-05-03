@@ -5,12 +5,14 @@
   "description": "This is a simple chatbot demo built with Node.js (Express), node-nlp, ReactJS and Redux.",
   "scripts": {
     "server": "cd chatbot-api && npm start",
+    "dev-server": "cd chatbot-api && npm run dev",
     "client": "cd chatbot-ui && npm start",
-    "start": "./node_modules/.bin/concurrent \"npm run server\" \"npm run client\""
+    "start": "./node_modules/.bin/concurrently \"npm run server\" \"npm run client\"",
+    "dev": "./node_modules/.bin/concurrently \"npm run dev-server\" \"npm run client\""
   },
   "author": "Ice Lam",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^1.0.0"
+    "concurrently": "^4.1.0"
   }
 }
