@@ -21,7 +21,7 @@ const ChatbotHistory = ({ readyToChat, serverError, waitingForAnswer, sendError 
       const scrollToPos = chatHistory.children[recordCount - 2].offsetTop;
       chatHistory.scrollTop = scrollToPos;
     }
-  },[chatRecord]);
+  },[chatHistory, chatRecord]);
 
   return (
     <div className="chatbot__history" ref={(node) => { chatHistory = node }}>

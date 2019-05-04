@@ -4,8 +4,7 @@ const initialState = {
   waitingForAnswer: false,
   sendError: false,
   showInfo: false,
-  chatRecord: [],
-  lastQuestion: ''
+  chatRecord: []
 };
 
 export default initialState;

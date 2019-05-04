@@ -31,8 +31,7 @@ export default (state = initialState, action) => {
     // Get Answer
     case types.WAIT_FOR_ANSWER:
       return Object.assign({}, state, {
-        waitingForAnswer: true,
-        lastQuestion: action.text
+        waitingForAnswer: true
       });
     case types.WAIT_FOR_ANSWER_FAILED:
       return Object.assign({}, state, {

@@ -64,7 +64,8 @@ export const submitQuestion = (text) => (dispatch) => {
 };
 
 const getLastQuestion = (state) => {
-  return state.lastQuestion;
+  const [lastUserRecord] = state.chatRecord.filter(r => r.user === 'user').slice(-1);
+  return lastUserRecord.text;
 };
 
 export const retrySubmitQuestion = () => (dispatch, getState) => {
@@ -74,14 +75,12 @@ export const retrySubmitQuestion = () => (dispatch, getState) => {
   return dispatch(postQuestionToServer(text, true));
 };
 
-const resetSendError = (text) => ({
-  type: types.RESET_SEND_ERROR,
-  text
+const resetSendError = () => ({
+  type: types.RESET_SEND_ERROR
 });
 
-const waitForAnswer = (text) => ({
-  type: types.WAIT_FOR_ANSWER,
-  text
+const waitForAnswer = () => ({
+  type: types.WAIT_FOR_ANSWER
 });
 
 const waitForAnswerFailed = () => ({
