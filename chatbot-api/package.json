@@ -9,20 +9,20 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "boxen": "^3.2.0",
+    "boxen": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "node-nlp": "^3.7.1",
-    "portfinder": "^1.0.24",
+    "node-nlp": "^3.10.2",
+    "portfinder": "^1.0.25",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "dotenv": "^7.0.0",
+    "dotenv": "^8.2.0",
     "dts-bundle": "^0.7.3",
-    "eslint": "^5.7.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "nodemon": "^1.19.2",
-    "typescript": "^3.6.2"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.4"
   }
 }
