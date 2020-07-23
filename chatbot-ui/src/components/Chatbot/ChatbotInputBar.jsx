@@ -1,6 +1,6 @@
 /* Chatbot Input Bar Component */
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Input from '../Input';
@@ -12,12 +12,15 @@ import './ChatbotInputBar.scss';
 const ChatbotInputBar = ({
   readyToChat, waitingForAnswer, sendError, actions
 }) => {
-  let chatbotInput = null;
+  const [chatbotInputValue, setChatbotInputValue] = useState('');
+  const changeHandler = (event) => {
+    setChatbotInputValue(event.target.value);
+  };
 
   const inputSubmit = () => {
-    if (readyToChat && !waitingForAnswer && !sendError && chatbotInput.value) {
-      actions.submitQuestion(chatbotInput.value);
-      chatbotInput.value = '';
+    if (readyToChat && !waitingForAnswer && !sendError && chatbotInputValue) {
+      actions.submitQuestion(chatbotInputValue);
+      setChatbotInputValue('');
     }
   };
 
@@ -29,8 +32,17 @@ const ChatbotInputBar = ({
 
   return (
     <div className="chatbot__input">
-      <Input placeholder="Type your message here..." ref={(node) => { chatbotInput = node; }} keydownFunction={keydown} />
-      <IconButton icon="far fa-paper-plane" clickFunction={inputSubmit} disabled={!readyToChat || waitingForAnswer || sendError} />
+      <Input
+        placeholder="Type your message here..."
+        keydownFunction={keydown}
+        value={chatbotInputValue}
+        onChange={changeHandler}
+      />
+      <IconButton
+        icon="far fa-paper-plane"
+        clickFunction={inputSubmit}
+        disabled={!readyToChat || waitingForAnswer || sendError || !chatbotInputValue}
+      />
     </div>
   );
 };

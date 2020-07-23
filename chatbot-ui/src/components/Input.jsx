@@ -6,20 +6,25 @@ import PropTypes from 'prop-types';
 // Styles
 import './Input.scss';
 
-const Input = React.forwardRef(({ placeholder, disabled, keydownFunction }, ref) => (
+const Input = ({
+  placeholder, disabled, keydownFunction, onChange, value
+}) => (
   <input
     placeholder={placeholder}
     className="input-field"
     disabled={disabled}
-    ref={ref}
     onKeyDown={keydownFunction}
+    onChange={onChange}
+    value={value}
   />
-));
+);
 
 Input.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  keydownFunction: PropTypes.func
+  keydownFunction: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 };
 
 Input.defaultProps = {
