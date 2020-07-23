@@ -1,4 +1,4 @@
-import "core-js/stable";
+import 'core-js/stable';
 import 'core-js/es/map';
 import 'core-js/es/set';
 
@@ -9,7 +9,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
-import rootReducer from 'store/reducers';
+import rootReducer from './store/reducers';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -22,7 +22,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as ChatbotActions from 'store/actions';
-import ChatbotRetrySend from 'components/Chatbot/ChatbotRetrySend';
+import * as ChatbotActions from '../store/actions';
+import ChatbotRetrySend from '../components/Chatbot/ChatbotRetrySend';
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(ChatbotActions, dispatch)

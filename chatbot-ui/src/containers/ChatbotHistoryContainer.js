@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ChatbotHistory from 'components/Chatbot/ChatbotHistory';
+import ChatbotHistory from '../components/Chatbot/ChatbotHistory';
 
 const mapStateToProps = (state) => ({
   readyToChat: state.readyToChat,

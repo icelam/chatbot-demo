@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ChatbotBubble from 'components/Chatbot/ChatbotBubble';
+import ChatbotBubble from './ChatbotBubble';
 
 // Styles
 import './ChatbotMessage.scss';

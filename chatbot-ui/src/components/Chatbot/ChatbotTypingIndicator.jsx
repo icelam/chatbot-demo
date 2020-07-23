@@ -7,9 +7,9 @@ import './ChatbotTypingIndicator.scss';
 
 const ChatbotTypingIndicator = () => (
   <div className="chatbot__typing">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span />
+    <span />
+    <span />
   </div>
 );
 

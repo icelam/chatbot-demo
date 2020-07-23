@@ -5,20 +5,24 @@ export default (state = initialState, action) => {
   console.log(action);
 
   switch (action.type) {
-    //Test Conections
+    // Test Conections
     case types.SERVER_CONNECT_SUCCESS:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         readyToChat: true
-      });
+      };
+
     case types.SERVER_CONNECT_FAIL:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         readyToChat: false,
         serverError: true
-      });
+      };
 
     // Add message
     case types.ADD_MESSAGE:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         chatRecord: [
           ...state.chatRecord,
           {
@@ -26,20 +30,25 @@ export default (state = initialState, action) => {
             user: action.user
           }
         ]
-      });
+      };
 
     // Get Answer
     case types.WAIT_FOR_ANSWER:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         waitingForAnswer: true
-      });
+      };
+
     case types.WAIT_FOR_ANSWER_FAILED:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         waitingForAnswer: false,
         sendError: true
-      });
+      };
+
     case types.RECEIVED_ANSWER:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         waitingForAnswer: false,
         chatRecord: [
           ...state.chatRecord,
@@ -48,23 +57,28 @@ export default (state = initialState, action) => {
             user: 'bot'
           }
         ]
-      });
+      };
 
     // Error handlings
     case types.RESET_SEND_ERROR:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         sendError: false
-      });
+      };
 
-    //Show Info
+    // Show Info
     case types.SHOW_INFO_MODAL:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         showInfo: true
-      });
+      };
+
     case types.CLOSE_INFO_MODAL:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         showInfo: false
-      });
+      };
+
     default:
       return state;
   }

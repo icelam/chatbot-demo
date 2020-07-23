@@ -3,8 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from 'components/IconButton';
-import ChatbotIcon from 'components/Chatbot/ChatbotIcon';
+import IconButton from '../IconButton';
+import ChatbotIcon from './ChatbotIcon';
 
 // Styles
 import './ChatbotHeader.scss';
