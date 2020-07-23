@@ -7,12 +7,9 @@
   },
   "extends": ["eslint:recommended", "airbnb-base"],
   "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./webpack/webpack.base.conf.js"
-      },
-      "extensions": [".js"]
-    }
+    "import/resolver": [
+      "node"
+    ]
   },
   "parserOptions": {
     "sourceType": "module"

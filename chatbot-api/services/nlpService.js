@@ -6,10 +6,10 @@ const { answers } = require('../data/answers/main');
 
 exports.trainNlp = async () => {
   // Adds the utterances and intents for the NLP
-  questions.map(q => manager.addDocument('en', q.question, q.answer));
+  questions.map(({ question, answer }) => manager.addDocument('en', question, answer));
 
   // Train also the NLG
-  answers.map(a => manager.addAnswer('en', a.key, a.answer));
+  answers.map(({ key, answer }) => manager.addAnswer('en', key, answer));
 
   // Train and save the model.
   logger.info('Training, please wait..');

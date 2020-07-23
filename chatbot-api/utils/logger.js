@@ -5,7 +5,9 @@ const { createLogger, format, transports } = require('winston');
 const LOG_FOLDER = path.resolve(__dirname, '../logs');
 
 const loggerFormat = format.printf(
-  ({ level, message, timestamp, params }) => `${timestamp} ${level}: ${message}${params ? ` - ${params}` : ''}`
+  ({
+    level, message, timestamp, params
+  }) => `${timestamp} ${level}: ${message}${params ? ` - ${params}` : ''}`
 );
 
 exports.logger = createLogger({
