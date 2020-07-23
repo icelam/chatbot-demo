@@ -33,8 +33,16 @@ const ChatbotHistory = ({
           <ChatbotMessage key={index} text={text} user={user} />
         ))
       }
-      {waitingForAnswer ? <ChatbotTypingIndicator /> : ''}
-      {sendError ? <ChatbotRetrySend /> : ''}
+      {
+        waitingForAnswer
+          ? <ChatbotTypingIndicator />
+          : null
+      }
+      {
+        sendError
+          ? <ChatbotRetrySend />
+          : null
+      }
       <ErrorMessage message="Could not connect to server" show={serverError} />
     </div>
   );

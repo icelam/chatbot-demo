@@ -15,9 +15,17 @@ const Modal = ({
         <IconButton icon="fas fa-times" clickFunction={closeFunction} theme="light" />
       </div>
       <div className="modal__box__content">
-        {icon ? (<div className="modal__box__content__icon"><img src={icon} alt="" /></div>) : ''}
+        {
+          icon
+            ? <div className="modal__box__content__icon"><img src={icon} alt="" /></div>
+            : null
+        }
         <div className="modal__box__content__text">
-          <h3>{title}</h3>
+          {
+            title
+              ? <h3>{title}</h3>
+              : null
+          }
           {content}
         </div>
       </div>
