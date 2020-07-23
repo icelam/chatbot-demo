@@ -3,16 +3,18 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import ChatbotMessage from 'components/Chatbot/ChatbotMessage';
-import ChatbotTypingIndicator from 'components/Chatbot/ChatbotTypingIndicator';
-import ChatbotRetrySend from 'containers/ChatbotRetrySendContainer';
-import Loading from 'components/Loading';
-import ErrorMessage from 'components/ErrorMessage';
+import ChatbotMessage from './ChatbotMessage';
+import ChatbotTypingIndicator from './ChatbotTypingIndicator';
+import ChatbotRetrySend from '../../containers/ChatbotRetrySendContainer';
+import Loading from '../Loading';
+import ErrorMessage from '../ErrorMessage';
 
 // Styles
 import './ChatbotHistory.scss';
 
-const ChatbotHistory = ({ readyToChat, serverError, waitingForAnswer, sendError , chatRecord }) => {
+const ChatbotHistory = ({
+  readyToChat, serverError, waitingForAnswer, sendError, chatRecord
+}) => {
   let chatHistory = null;
 
   useEffect(() => {
@@ -21,17 +23,21 @@ const ChatbotHistory = ({ readyToChat, serverError, waitingForAnswer, sendError 
       const scrollToPos = chatHistory.children[recordCount - 2].offsetTop;
       chatHistory.scrollTop = scrollToPos;
     }
-  },[chatHistory, chatRecord]);
+  }, [chatHistory, chatRecord]);
 
   return (
-    <div className="chatbot__history" ref={(node) => { chatHistory = node }}>
+    <div className="chatbot__history" ref={(node) => { chatHistory = node; }}>
       <Loading show={!readyToChat} />
-      { chatRecord.map((r, i) => <ChatbotMessage key={i} text={r.text} user={r.user}/>) }
-      { waitingForAnswer ? <ChatbotTypingIndicator /> : '' }
-      { sendError ? <ChatbotRetrySend /> : '' }
+      {
+        chatRecord.map(({ text, user }, index) => (
+          <ChatbotMessage key={index} text={text} user={user} />
+        ))
+      }
+      {waitingForAnswer ? <ChatbotTypingIndicator /> : ''}
+      {sendError ? <ChatbotRetrySend /> : ''}
       <ErrorMessage message="Could not connect to server" show={serverError} />
     </div>
-  )
+  );
 };
 
 ChatbotHistory.propTypes = {

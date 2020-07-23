@@ -1,4 +1,4 @@
-/* Buttons with Icons Coomponent*/
+/* Buttons with Icons Coomponent */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -6,14 +6,16 @@ import PropTypes from 'prop-types';
 // Styles
 import './IconButton.scss';
 
-const IconButton = ({ icon, clickFunction, theme, disabled }) => (
+const IconButton = ({
+  icon, clickFunction, theme, disabled
+}) => (
   <button
     type="button"
     className={`icon-button${theme === 'light' ? ' icon-button--light' : ''}`}
     onClick={clickFunction}
     disabled={disabled}
   >
-    <i className={icon}></i>
+    <i className={icon} />
   </button>
 );
 
@@ -25,7 +27,8 @@ IconButton.propTypes = {
 };
 
 IconButton.defaultProps = {
-  disabled: false
+  disabled: false,
+  theme: ''
 };
 
 export default IconButton;

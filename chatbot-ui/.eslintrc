@@ -1,0 +1,18 @@
+{
+  "extends": ["react-app", "airbnb", "plugin:jsx-a11y/recommended"],
+  "settings": {
+    "import/core-modules": ["history", "prop-types"],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-expressions": [2, { "allowTernary": true, "allowShortCircuit": true }],
+    "comma-dangle": ["error", "never"],
+    "react/jsx-one-expression-per-line": ["off"],
+    "no-nested-ternary": ["off"],
+    "no-plusplus": ["off"]
+  }
+}

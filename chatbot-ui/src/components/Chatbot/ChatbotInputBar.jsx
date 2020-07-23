@@ -3,13 +3,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Input from 'components/Input';
-import IconButton from 'components/IconButton';
+import Input from '../Input';
+import IconButton from '../IconButton';
 
 // Styles
 import './ChatbotInputBar.scss';
 
-const ChatbotInputBar = ({ readyToChat, waitingForAnswer, sendError, actions }) => {
+const ChatbotInputBar = ({
+  readyToChat, waitingForAnswer, sendError, actions
+}) => {
   let chatbotInput = null;
 
   const inputSubmit = () => {
@@ -27,10 +29,10 @@ const ChatbotInputBar = ({ readyToChat, waitingForAnswer, sendError, actions }) 
 
   return (
     <div className="chatbot__input">
-      <Input placeholder="Type your message here..." ref={(node) => { chatbotInput = node }} keydownFunction={keydown} />
-      <IconButton icon="far fa-paper-plane" clickFunction={inputSubmit} disabled={!readyToChat || waitingForAnswer || sendError}/>
+      <Input placeholder="Type your message here..." ref={(node) => { chatbotInput = node; }} keydownFunction={keydown} />
+      <IconButton icon="far fa-paper-plane" clickFunction={inputSubmit} disabled={!readyToChat || waitingForAnswer || sendError} />
     </div>
-  )
+  );
 };
 
 ChatbotInputBar.propTypes = {

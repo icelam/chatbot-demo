@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as ChatbotActions from 'store/actions';
-import ChatbotInputBar from 'components/Chatbot/ChatbotInputBar';
+import * as ChatbotActions from '../store/actions';
+import ChatbotInputBar from '../components/Chatbot/ChatbotInputBar';
 
 const mapStateToProps = (state) => ({
   readyToChat: state.readyToChat,
