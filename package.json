@@ -13,6 +13,6 @@
   "author": "Ice Lam",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.0.2"
+    "concurrently": "^5.2.0"
   }
 }
