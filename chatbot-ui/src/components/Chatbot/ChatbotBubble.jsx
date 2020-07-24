@@ -1,6 +1,6 @@
 /* Chatbot Speech Bubble Component */
 
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 // Styles
@@ -17,4 +17,4 @@ ChatbotBubble.propTypes = {
   user: PropTypes.string.isRequired
 };
 
-export default ChatbotBubble;
+export default memo(ChatbotBubble);

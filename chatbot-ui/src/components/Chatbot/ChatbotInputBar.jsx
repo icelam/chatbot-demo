@@ -1,6 +1,6 @@
 /* Chatbot Input Bar Component */
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Input from '../Input';
@@ -13,9 +13,9 @@ const ChatbotInputBar = ({
   readyToChat, waitingForAnswer, sendError, actions
 }) => {
   const [chatbotInputValue, setChatbotInputValue] = useState('');
-  const changeHandler = (event) => {
+  const changeHandler = useCallback((event) => {
     setChatbotInputValue(event.target.value);
-  };
+  }, []);
 
   const inputSubmit = () => {
     if (readyToChat && !waitingForAnswer && !sendError && chatbotInputValue) {

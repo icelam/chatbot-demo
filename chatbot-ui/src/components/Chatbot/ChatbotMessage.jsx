@@ -1,6 +1,6 @@
 /* Chatbot Message Component */
 
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import ChatbotBubble from './ChatbotBubble';
@@ -19,4 +19,4 @@ ChatbotMessage.propTypes = {
   user: PropTypes.string.isRequired
 };
 
-export default ChatbotMessage;
+export default memo(ChatbotMessage);
